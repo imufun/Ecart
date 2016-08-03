@@ -21,9 +21,9 @@ public class ShoppingCartHelper {
 
         if (catalog == null) {
             catalog = new Vector<Product>();
-            catalog.add(new Product("Yes or No", 20.20, "I love you!!!", res.getDrawable(R.mipmap.ic_launcher)));
-            catalog.add(new Product("Yes", 10.50, "I hate you!!!", res.getDrawable(R.mipmap.ic_launcher)));
-            catalog.add(new Product("No", 2.0, "I miss you!!!", res.getDrawable(R.mipmap.ic_launcher)));
+            catalog.add(new Product("Yes or No", 20.20, "I love you!!!", res.getDrawable(R.drawable.deadoralive)));
+            catalog.add(new Product("Yes", 10.50, "I hate you!!!", res.getDrawable(R.drawable.switchbook)));
+            catalog.add(new Product("No", 2.0, "I miss you!!!", res.getDrawable(R.drawable.watchmen)));
         }
         return catalog;
     }

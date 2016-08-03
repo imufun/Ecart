@@ -11,6 +11,7 @@ public class Product {
     public double price;
     public String description;
     public Drawable productImage;
+    public boolean selected;
 
     public Product(String title, double price, String description, Drawable productImage) {
         this.title = title;

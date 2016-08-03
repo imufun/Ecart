@@ -58,16 +58,22 @@ public class ProductAdapter extends BaseAdapter {
         } else {
             item = (ViewItem) convertView.getTag();
         }
-        Product cutProduct = mProductList.get(position);
-        item.productImageView.setImageDrawable(cutProduct.productImage);
-        item.productTitle.setText(cutProduct.title);
+        Product curProduct = mProductList.get(position);
+        item.productImageView.setImageDrawable(curProduct.productImage);
+        item.productTitle.setText(curProduct.title);
 
-        if (!mShowCheckBox){
+        if (!mShowCheckBox) {
             item.productCheckBox.setVisibility(View.GONE);
+        } else {
+            if (curProduct.selected == true) {
+                item.productCheckBox.setChecked(true);
+            } else {
+                item.productCheckBox.setChecked(false);
+            }
         }
 
 
-        return null;
+        return convertView;
     }
 
     private class ViewItem {
